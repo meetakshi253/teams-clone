@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800&display=swap');
+
+
+body{
+  background-color: #fff7e0;
+}
+
+
+.header_info
+{
+  background-color: #ffe381;
+  border-radius: 10px;
+  font-family: 'Raleway', sans-serif;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  margin-left: 10px;
+  width: 89%;
+}
+
+.app{
+  display: flex;
+  justify-content: space-between;
+}
+
+.app__left
+{
+  flex: 0.8;
+  display: flex;
+  flex-direction: column;
+}
+
+.app__right
+{
+  flex: 0.2;
+  display: flex;
+  flex-direction: column;
+}
+
+.app_videos
+{
+  flex-grow: 1;
+  background-color: #ffe381;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  /* width: 60vw; */
+  width: 93.5%;
+  height: 62vh;
+  margin-left: 60px;
+  border-radius: 8px;
+}
+
+#bunch-of-videos{
+    display: grid;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+    /* grid-template-columns: repeat(auto-fit, 400px);
+    grid-auto-rows: 400px;
+    grid-gap: 50px; */
+}
+
+.box_title
+{
+   padding: 5px;
+   color: black;
+   text-align: center;
+   font-family: 'Raleway', sans-serif;
+   font-size: 1.3em;
+   font-weight: 600;
+}
+
+video{
+    width: 50%;
+    height: 50%; 
+    object-fit: cover; /*maintain aspect ratio*/
+}
+
+.header
+{
+  display: flex;
+  flex-direction: row;
+  padding: 5px 10px 20px 20px;
+  margin: 7px 30px;
+  font-weight: 600;
+  margin-top: 10px;
+  margin-left: 50px;
+  width: 100%; 
+}
+
+.header_image img{
+  margin-top: 10px;
+}
+
+.app_controls
+{
+  background-color: #ffe381;
+  display: flex;
+  border-radius: 10px;
+  padding: 20px 20px;
+  justify-content: space-between;
+  text-align: center;
+  padding-left:25%;
+  /* position: fixed;
+  bottom: 0.5vh; */
+  /* left: 33%;
+  transform: translate(-50%, -50%);
+  margin: 0 auto; */
+  margin-left: 60px;
+  width: 93.5%; 
+  margin-top: 30px;
+}
+
+.incall_controls_block
+{
+  display: flex;
+}
+
+.incall_control
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 80px;
+  cursor: pointer;
+  padding: 8px, 10px;
+}
+
+i.control {
+  display: inline-block;
+  border-radius: 100px;
+  /* box-shadow: 0px 0px 2px #888; */
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  padding: 0.6em 0.6em;
+  background-color: #fff7e0;
+}
+
+i.send_button
+{
+  color: white;
+}
+
+span
+{
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.8em;
+  font-weight: 600;
+  margin-top: 4px;
+}
+
+footer
+{
+  margin-top: 10px;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.footer
+{
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin-left: 50% ;
+}
+
+p{
+  color: gray;
+  font-size: 13px;
+  font-family: 'Raleway', 'sans-serif';
+  font-weight: 600;
+}
+
+.send_message{
+  background-color: #ffd627;
+  border: none;
+  border-radius: 8px;
+  padding: 7px 10px;
+  cursor: pointer;
+  margin: 10px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.chatbox
+{
+  display: flex;
+  flex-direction: column;
+  background-color: #ffe381;
+  padding: 20px;
+  border-radius: 8px;
+  margin: 10px 50px;  
+  width: 32vw;
+}
+
+.chatbox_chat_area
+{
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+.message{
+  list-style: none;
+  color: black;
+}
+
+.chatbox_typing_area
+{
+  display: flex;
+  background-color: #fff7e0;
+  border-radius: 8px ;
+  padding: 5px 10px;
+}
+
+.chatbox_typing_area input[type="text"]{
+  flex-grow: 1;
+  background-color: transparent;
+  border: 0.1px solid #fff7e0;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  color: black;
+  font-size: 13.5px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
+  padding: 10px 20px;
+  margin: 8px 0;
+}
+
+
+hr{
+  height:2px;
+  border-width:0;
+  color:gray;
+  background-color:gray;
+  margin-top: 5px;
+  width: 100%;
+  margin-left: 30%;
+} 
+
+/* .video__button
+{
+    background: yellow;
+    text-align: center;
+    margin-right: 10px;
+    display:inline-block;
+    padding:1%;
+} */
