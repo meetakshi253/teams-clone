@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width-device-width,
+        initial-scale=1"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie-edge" />
+    <link href="/style.css" rel="stylesheet" type="text/css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script
+      src="https://unpkg.com/peerjs@1.3.1/dist/peerjs.min.js"
+      defer
+    ></script>
+    <script src="/socket.io/socket.io.js" defer>
+      //load all socket.io code to our frontend
+    </script>
+    <script src="script.js" defer></script>
+    <script src="https://kit.fontawesome.com/c939d0e917.js"></script>
+
+    <title>Teams Clone</title>
+    <style></style>
+  </head>
+
+  <body>
+    <div class="app">
+      <div class="app__left">
+        <header><%- include('partials/header') %></header>
+        <div class="col1">
+        <div class="app_videos">
+          <div id="bunch-of-videos">
+
+          </div>
+        </div>
+        <app_controls><%- include('partials/app_controls'); %></app_controls>
+        <footer><%- include('partials/footer.ejs'); %></footer>
+      </div>
+    </div>
+      <div class="app__right">
+        <chat_window><%- include('partials/chat_window'); %></chat_window>
+      </div>
+    </div>
+  </body>
+
+  <script>
+    const ROOM_ID = "<%= roomId %>"; //the room Id!
+    document.getElementsByClassName("header_info")[0].innerHTML += `Room ID: ${ROOM_ID}`;
+    // var user = prompt("Your Name")
+    // var  node = document.getElementsByClassName("box_title")[0]
+    // console.log(node)
+    // localStorage.setItem('username', user)
+    // node.innerHTML = `Chat with ${user}`; 
+  </script>
+</html>
+
