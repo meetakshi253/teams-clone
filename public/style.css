@@ -16,6 +16,7 @@ body{
   padding: 15px;
   margin-left: 10px;
   width: 89%;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
 }
 
 .app{
@@ -50,6 +51,7 @@ body{
   height: 62vh;
   margin-left: 60px;
   border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
 }
 
 #bunch-of-videos{
@@ -102,20 +104,23 @@ video{
   padding: 20px 20px;
   justify-content: space-between;
   text-align: center;
-  padding-left:25%;
+  padding-left:20%;
   /* position: fixed;
   bottom: 0.5vh; */
   /* left: 33%;
   transform: translate(-50%, -50%);
   margin: 0 auto; */
-  margin-left: 60px;
+  margin-left: 6.8%;
   width: 93.5%; 
   margin-top: 30px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
 }
 
 .incall_controls_block
 {
   display: flex;
+  justify-content: center;
+
 }
 
 .incall_control
@@ -127,15 +132,23 @@ video{
   min-width: 80px;
   cursor: pointer;
   padding: 8px, 10px;
+  margin-right: 15px;
+  
 }
 
 i.control {
   display: inline-block;
   border-radius: 100px;
   /* box-shadow: 0px 0px 2px #888; */
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
   padding: 0.6em 0.6em;
   background-color: #fff7e0;
+}
+
+i.control:hover{
+  background-color: whitesmoke;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  /* box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px; */
 }
 
 i.send_button
@@ -181,7 +194,7 @@ p{
   padding: 7px 10px;
   cursor: pointer;
   margin: 10px;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 }
 
 .chatbox
@@ -193,6 +206,7 @@ p{
   border-radius: 8px;
   margin: 10px 50px;  
   width: 32vw;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
 }
 
 .chatbox_chat_area
@@ -238,12 +252,3 @@ hr{
   width: 100%;
   margin-left: 30%;
 } 
-
-/* .video__button
-{
-    background: yellow;
-    text-align: center;
-    margin-right: 10px;
-    display:inline-block;
-    padding:1%;
-} */

@@ -26,7 +26,6 @@ io.on('connection', socket=>{
     {
         socket.join(roomId)
         //notify everyone in the room about the presence of the new user
-        console.log(userId)
         socket.broadcast.to(roomId).emit('user-joinedin', userId)
         //whenever we join a room, the userid and roomid is passed.
 
