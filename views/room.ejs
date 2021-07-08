@@ -56,10 +56,11 @@
     {
       USER = "Anonymous"
     }
-    var  node = document.getElementsByClassName("box_title")[0]
+    var  node = document.getElementById("chat_username")
+    node.innerHTML = USER;
     console.log(node)
     localStorage.setItem('username', USER)
-    node.innerHTML = `Chat with ${USER}`; 
+
   </script>
 </html>
 
