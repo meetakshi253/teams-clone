@@ -1,21 +1,24 @@
 
 const socket = io('/')  //root path
 const newguy = new Peer(undefined, {
+    path: "/peerjs",
     host: '/',
-    port: '5000'
+    port: '3000'
 })  //server takes care of generating our own id
 //now we can use this id to connect with other people
+console.log(newguy._connections)
 
 const videoSet = document.getElementById("bunch-of-videos")
 const hostVideo = document.createElement("video")
-const peopleinchat = {}
+var peopleinchat = {}
+var videosinchat = {}
 hostVideo.muted = true   //my own video should be muted!
 let hostVideoStream;
 var friendsCall;
 
 navigator.mediaDevices.getUserMedia({
     video: true,
-    audio: true
+    audio: {echoCancellation: true}
 })
     .then(stream => {
         addNewUserVideoStream(hostVideo, stream)
@@ -23,6 +26,7 @@ navigator.mediaDevices.getUserMedia({
         newguy.on('call', newcall => {
             const friendsvideo = document.createElement('video')
             newcall.answer(stream)   //send our  stream to the callee
+            console.log("answer"+newguy)
             newcall.on('stream', friendsvideoStream => {
                 addNewUserVideoStream(friendsvideo, friendsvideoStream)
             })
@@ -37,11 +41,17 @@ navigator.mediaDevices.getUserMedia({
 
 socket.on('user-left', userId => {
     console.log(userId + " left")
+    console.log(document.getElementById(userId))
+    videosinchat[userId].remove()
     if (peopleinchat[userId]) {
-        peopleinchat[userId].close()
-
+        peopleinchat[userId].close()   
     }
 })
+
+function endcall()
+{
+
+}
 
 newguy.on('open', userid => {
     socket.emit('join-room', ROOM_ID, userid)
@@ -50,9 +60,10 @@ newguy.on('open', userid => {
 function send_message()
 {
     const typed_message = document.getElementById("type_message").value;
-    const username = localStorage.getItem('username')
+    const username = $('#chat_username').text();
     socket.emit('in-call-message', typed_message, username)
     document.getElementById("type_message").value = "";
+    console.log(peopleinchat)
 }
 
 socket.on("new-message", (msg, user)=>
@@ -63,21 +74,23 @@ socket.on("new-message", (msg, user)=>
     </div>
     <br>`
     $(".messages").append(html)
-    console.log(node+" "+node.innerHTML+" "+document.getElementsByClassName("messages")[0])
 })
 
 
 function addNewUserToCall(userId, stream) {
     const calluser = newguy.call(userId, stream)   //call a user and send them your video
+    console.log(userId)
     const video = document.createElement('video')   //when they  send back the video stream, add it to video element on our page
+    video.setAttribute('id', userId)
     calluser.on('stream', videoStream => {    
         addNewUserVideoStream(video, videoStream, "yes")
     })
+    peopleinchat[userId] = calluser;
+    videosinchat[userId] = video;
+    // console.log(peopleinchat)
     calluser.on('close', () => {
         video.remove()
     })
-    peopleinchat[userId] = calluser;
-    console.log(peopleinchat)
 }
 
 function addNewUserVideoStream(video, stream, chk="no") //add a new video stream
@@ -92,6 +105,7 @@ function addNewUserVideoStream(video, stream, chk="no") //add a new video stream
     }
     if (!videoSet.contains(video)) 
         videoSet.append(video)
+    console.log(videoSet)
 }
 
 function mute_unmute() {
