@@ -22,6 +22,7 @@
     </script>
     <script src="script.js" defer></script>
     <script src="https://kit.fontawesome.com/c939d0e917.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
     <title>Teams Clone</title>
     <style></style>
@@ -50,11 +51,15 @@
   <script>
     const ROOM_ID = "<%= roomId %>"; //the room Id!
     document.getElementsByClassName("header_info")[0].innerHTML += `Room ID: ${ROOM_ID}`;
-    // var user = prompt("Your Name")
-    // var  node = document.getElementsByClassName("box_title")[0]
-    // console.log(node)
-    // localStorage.setItem('username', user)
-    // node.innerHTML = `Chat with ${user}`; 
+    var USER = prompt("Your Name")
+    if(!USER)
+    {
+      USER = "Anonymous"
+    }
+    var  node = document.getElementsByClassName("box_title")[0]
+    console.log(node)
+    localStorage.setItem('username', USER)
+    node.innerHTML = `Chat with ${USER}`; 
   </script>
 </html>
 
