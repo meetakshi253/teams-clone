@@ -31,7 +31,7 @@ io.on('connection', socket=>{
 
         socket.on('in-call-message', (msg, user) =>
         {
-            io.broadcast.to(roomId).emit('new-message', user, msg)
+            io.to(roomId).emit('new-message', msg, user)
         })
 
         socket.on('disconnect', ()=>

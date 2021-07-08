@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800&display=swap');
 
 
 body{
@@ -146,9 +146,19 @@ i.control {
 }
 
 i.control:hover{
-  background-color: whitesmoke;
+  background-color: white;
   box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
   /* box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px; */
+}
+
+i.leaveroom
+{
+  background-color: #fa314a;
+  color: #fff7e0;
+}
+
+i.leaveroom:hover{
+  background-color: rgb(227,48,47);
 }
 
 i.send_button
@@ -204,19 +214,50 @@ p{
   background-color: #ffe381;
   padding: 20px;
   border-radius: 8px;
-  margin: 10px 50px;  
-  width: 32vw;
+  margin: 15px 50px 15px 30px;  
+  width: 33vw;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+  height: 100%;
 }
 
 .chatbox_chat_area
 {
   flex-grow: 1;
   overflow-y: auto;
+  height: 67vh;
+  margin-bottom: 20px;
+  padding: 20px;
 }
 
-.message{
-  list-style: none;
+.message
+{
+  display:inline-block;
+  background-color: white;
+  font-family: inherit;
+  font-weight: 500;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+  padding-left: 10px;;
+}
+
+.message_user_div
+{
+  display: inline-block;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 0 5px;
+}
+
+.message_content_div
+{
+  display: inline-block;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 300;
+  padding: 3px 5px;
   color: black;
 }
 
@@ -226,6 +267,7 @@ p{
   background-color: #fff7e0;
   border-radius: 8px ;
   padding: 5px 10px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 .chatbox_typing_area input[type="text"]{

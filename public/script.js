@@ -47,6 +47,25 @@ newguy.on('open', userid => {
     socket.emit('join-room', ROOM_ID, userid)
 })
 
+function send_message()
+{
+    const typed_message = document.getElementById("type_message").value;
+    const username = localStorage.getItem('username')
+    socket.emit('in-call-message', typed_message, username)
+    document.getElementById("type_message").value = "";
+}
+
+socket.on("new-message", (msg, user)=>
+{
+    let html = `<div class="message">
+        <div class="message_user_div">${user}</div><br>
+        <div class="message_content_div">${msg}</div>
+    </div>
+    <br>`
+    $(".messages").append(html)
+    console.log(node+" "+node.innerHTML+" "+document.getElementsByClassName("messages")[0])
+})
+
 
 function addNewUserToCall(userId, stream) {
     const calluser = newguy.call(userId, stream)   //call a user and send them your video
