@@ -50,12 +50,24 @@
 
   <script>
     const ROOM_ID = "<%= roomId %>"; //the room Id!
-    document.getElementsByClassName("header_info")[0].innerHTML += `Room ID: ${ROOM_ID}`;
+    const userinfo = document.createElement('div')
+    const roominfo = document.createElement('div')
+    userinfo.setAttribute('class', "meeting_info")
+    roominfo.setAttribute('class', "meeting_info")
+    
     var USER = prompt("Your Name")
     if(!USER)
     {
       USER = "Anonymous"
     }
+    $(".header_info").append(`
+    <div class="meeting_info"><u>Room ID</u>: ${ROOM_ID}</div>
+    <div class="meeting_info"><u>User Name</u>: ${USER}</div>
+    `)
+    // roominfo.innerHTML += `Room ID: ${ROOM_ID}`;
+    // userinfo.innerHTML += `Username: ${USER}`;
+    // document.getElementsByClassName("header_info")[0].append(roominfo)
+    document.getElementsByClassName("header_info")[0].append(userinfo)
     var  node = document.getElementById("chat_username")
     node.innerHTML = USER;
     console.log(node)
@@ -63,4 +75,3 @@
 
   </script>
 </html>
-

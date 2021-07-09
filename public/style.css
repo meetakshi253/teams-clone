@@ -11,8 +11,6 @@ body{
   background-color: #ffe381;
   border-radius: 10px;
   font-family: 'Raleway', sans-serif;
-  display: flex;
-  flex-direction: column;
   padding: 15px;
   margin-left: 10px;
   width: 89%;
@@ -40,29 +38,30 @@ body{
 
 .app_videos
 {
-  flex-grow: 1;
-  background-color: #ffe381;
   display: flex;
+  flex-grow: 1;
+  flex-direction: row;
+  background-color: #ffe381;
   justify-content: center;
   align-items: center;
-  padding: 30px;
+  padding: 20px;
   /* width: 60vw; */
   width: 93.5%;
   height: 62vh;
   margin-left: 60px;
   border-radius: 8px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+  box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
 }
 
 #bunch-of-videos{
-    display: grid;
+    display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    
+    flex-grow: 1;
     /* grid-template-columns: repeat(auto-fit, 400px);
     grid-auto-rows: 400px;
-    grid-gap: 50px; */
-}
+    grid-gap: 50px;*/
+} 
 
 .box_title
 {
@@ -76,8 +75,9 @@ body{
 
 video{
     width: 50%;
-    height: 50%; 
+    height: 60%; 
     object-fit: cover; /*maintain aspect ratio*/
+    padding: 8px;
 }
 
 .header
@@ -90,6 +90,16 @@ video{
   margin-top: 10px;
   margin-left: 50px;
   width: 100%; 
+}
+
+.meeting_info
+{
+  margin-top:5px;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  float:left;
+  margin-right: 2%;
 }
 
 .header_image img{
@@ -176,7 +186,7 @@ span
 
 footer
 {
-  margin-top: 10px;
+  margin-top: 40px;
   bottom: 0;
   width: 100%;
   text-align: center;
@@ -227,12 +237,15 @@ p{
   height: 67vh;
   margin-bottom: 20px;
   padding: 20px;
+  background-color: #fff7e0;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
 }
 
 .message
 {
   display:inline-block;
-  background-color: white;
+  background-color: whitesmoke;
   font-family: inherit;
   font-weight: 500;
   padding: 10px;
