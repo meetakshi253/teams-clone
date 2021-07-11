@@ -45,6 +45,16 @@ io.on('connection', socket=>{
             io.to(roomId).emit('new-message', msg, user)
         })
 
+        socket.on('remove-video', (username)=>
+        {
+            io.to(roomId).emit('end-video-chat', username)
+        })
+
+        socket.on('leave-room', (username)=>
+        {
+            socket.broadcast.to(roomId).emit('user-left-room', username)
+        })
+
         socket.on('disconnect', ()=>
         {
             console.log(roomId+" "+userId)
