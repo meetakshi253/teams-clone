@@ -193,8 +193,8 @@ footer
 {
   margin-top: 40px;
   bottom: 0;
-  width: 100%;
   text-align: center;
+  margin-bottom: 10px;
 }
 
 .footer
@@ -202,7 +202,6 @@ footer
   text-align: center;
   align-items: center;
   justify-content: center;
-  margin-left: 50% ;
 }
 
 p{
@@ -304,11 +303,11 @@ p{
 
 
 hr{
-  height:2px;
-  border-width:0;
-  color:gray;
-  background-color:gray;
-  margin-top: 5px;
-  width: 100%;
-  margin-left: 30%;
-} 
+  margin-top: 1rem;
+  margin-left: 25vw;
+  margin-bottom: 1rem;
+  border: 0;
+  width: 50%;
+  border-top: 1.5px solid rgba(0,0,0,.3);
+}
+
