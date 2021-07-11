@@ -43,18 +43,26 @@ socket.on('user-left', userId => {
     }
 })
 
-function endcall()
-{
-
-}
-
 newguy.on('open', userid => {
     socket.emit('join-room', ROOM_ID, userid)
+})
+
+socket.on('end-video-chat', (username)=>
+{
+    destroy_video_chat()
+})
+
+socket.on('user-left-room', (username)=>
+{
+    destroy_video_chat() 
 })
 
 function send_message()
 {
     const typed_message = document.getElementById("type_message").value;
+
+    if(typed_message.length<1)
+    {return}
     const username = $('#chat_username').text();
     console.log(username)
     socket.emit('in-call-message', typed_message, username)
@@ -129,6 +137,17 @@ function play_pause()
     } 
 }
 
+function endcall()
+{
+    socket.emit('remove-video', $('#chat_username').text())
+ //assign ID and create a socket.io event and then use that to remove the video with that particular div id
+}
+
+function leaveroom()
+{
+    socket.emit('leave-room',$('#chat_username').text())
+    window.location.href="about:blank"
+}
 // function share_screen()
 // {
 //     async ()=>
@@ -173,5 +192,15 @@ function turnon_video()
     document.querySelector('.incall_controls_video').innerHTML = newcam;
 }
 
+function destroy_video_chat()
+{
+    newguy.destroy();
+    document.getElementById("bunch-of-videos").innerHTML=null;
+    const tracks = hostVideoStream.getTracks();
+    tracks.forEach(function(track) {
+        track.stop();
+      });
+      hostVideo.srcObject = null;
+}
 
  
