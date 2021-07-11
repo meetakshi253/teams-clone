@@ -38,6 +38,7 @@ navigator.mediaDevices.getUserMedia({
 
 socket.on('user-left', userId => {
     console.log(userId + " left")
+    endcall()
     if (peopleinchat[userId]) {
         peopleinchat[userId].close()
     }
@@ -201,6 +202,11 @@ function destroy_video_chat()
         track.stop();
       });
       hostVideo.srcObject = null;
-}
 
- 
+      if($(".app_videos"))
+      {
+        $(".app_videos").css("display", "none");
+      }
+      $(".app_controls").css("display", "none");
+      
+}
