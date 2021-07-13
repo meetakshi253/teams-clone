@@ -2,7 +2,7 @@
 
 
 body{
-  background-color: #fff7e0;
+  background-color: #eeeaee;
 }
 
 header{
@@ -12,7 +12,7 @@ header{
 
 .header_info
 {
-  background-color: #ffe381;
+  background-color: #BEAEE2;
   border-radius: 10px;
   font-family: 'Raleway', sans-serif;
   padding: 15px;
@@ -45,7 +45,7 @@ header{
   display: flex;
   flex-grow: 1;
   flex-direction: row;
-  background-color: #ffe381;
+  background-color: #BEAEE2;
   justify-content: center;
   align-items: center;
   padding: 20px;
@@ -126,7 +126,7 @@ video{
 
 .app_controls
 {
-  background-color: #ffe381;
+  background-color: #BEAEE2;
   display: flex;
   border-radius: 10px;
   padding: 20px 20px;
@@ -170,11 +170,11 @@ i.control {
   /* box-shadow: 0px 0px 2px #888; */
   box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
   padding: 0.6em 0.6em;
-  background-color: #fff7e0;
+  background-color: #6247aa;
 }
 
 i.control:hover{
-  background-color: white;
+  background-color:  #58427c;
   box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
   /* box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px; */
 }
@@ -188,6 +188,16 @@ i.leaveroom
 i.leaveroom:hover{
   background-color: rgb(227,48,47);
 }
+
+i.endcall{
+  color: #fa314a; 
+  background-color: white;
+}
+
+i.endcall:hover{
+  background-color:#eeeaee ;
+}
+
 
 i.send_button
 {
@@ -225,7 +235,7 @@ p{
 }
 
 .send_message{
-  background-color: #ffd627;
+  background-color: #6247aa;
   border: none;
   border-radius: 8px;
   padding: 7px 10px;
@@ -234,11 +244,16 @@ p{
   box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 }
 
+.send_message:hover{
+  background-color: #58427c
+
+}
+
 .chatbox
 {
   display: flex;
   flex-direction: column;
-  background-color: #ffe381;
+  background-color: #BEAEE2;
   padding: 20px;
   border-radius: 8px;
   margin: 15px 50px 15px 30px;  
@@ -254,7 +269,7 @@ p{
   height: 67vh;
   margin-bottom: 20px;
   padding: 20px;
-  background-color: #fff7e0;
+  background-color: #eeeaee;
   border-radius: 8px;
   box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
 }
@@ -262,7 +277,7 @@ p{
 .message
 {
   display:inline-block;
-  background-color: whitesmoke;
+  background-color: white;
   font-family: inherit;
   font-weight: 500;
   padding: 10px;
@@ -294,7 +309,7 @@ p{
 .chatbox_typing_area
 {
   display: flex;
-  background-color: #fff7e0;
+  background-color: #eeeaee;
   border-radius: 8px ;
   padding: 5px 10px;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
@@ -303,7 +318,7 @@ p{
 .chatbox_typing_area input[type="text"]{
   flex-grow: 1;
   background-color: transparent;
-  border: 0.1px solid #fff7e0;
+  border: 0.1px solid white;
   border-radius: 8px;
   box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
   color: black;
