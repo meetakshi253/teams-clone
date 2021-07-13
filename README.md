@@ -2,6 +2,7 @@
 # Microsoft Teams Clone
 
 [Teams Clone]('https://github.com/meetakshi253/teams-clone') is a web app for facilitating video calls and in-call text chatting, developed for the Microsoft Engage Mentorship Program 2021.
+> **Note:** The app works best for two peers only.
 
 <br />
 
