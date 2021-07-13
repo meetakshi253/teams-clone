@@ -4,6 +4,7 @@ app.use(express.static(__dirname));
 const server = require('http').Server(app)
 const io = require('socket.io')(server)  //a server based on our express server passed to socket.io
 app.set('view engine', 'ejs')
+app.enable('trust proxy');
 const { ExpressPeerServer }  = require("peer");
 const peerServer = ExpressPeerServer(server,
     {
@@ -63,5 +64,4 @@ io.on('connection', socket=>{
     }) 
 })
 
-//server.listen(process.env.PORT || 3000)
-server.listen(3000)
+server.listen(process.env.PORT || 3000)

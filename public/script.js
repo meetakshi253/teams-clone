@@ -58,6 +58,30 @@ socket.on('user-left-room', (username)=>
     destroy_video_chat() 
 })
 
+function share_screen()
+{
+    navigator.mediaDevices.getDisplayMedia({
+        video:
+        {
+            cursor: 'always'
+        },
+        audio:
+        {
+            noiseSuppression: true,
+            echoCancellation: true
+
+        }
+    })
+    .then((stream)=>
+    {
+         let videoTrack = stream.getVideoTracks()[0];
+         let sender = newguy.getSender().find()
+    }).catch((err)=>
+    {
+        console.log("unable to display screen")
+    })
+}
+
 function send_message()
 {
     const typed_message = document.getElementById("type_message").value;
@@ -149,10 +173,12 @@ function leaveroom()
     socket.emit('leave-room',$('#chat_username').text())
     window.location.href="about:blank"
 }
+
 // function share_screen()
 // {
 //     async ()=>
 //     {
+//         const
 
 //     }
 // }
