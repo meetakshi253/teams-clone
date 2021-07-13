@@ -205,8 +205,12 @@ function destroy_video_chat()
 
       if($(".app_videos"))
       {
-        $(".app_videos").css("display", "none");
-      }
-      $(".app_controls").css("display", "none");
-      
+
+        document.getElementsByClassName("app_videos")[0].style.backgroundColor = "white"
+        document.getElementsByClassName("app_videos")[0].style.boxShadow = "none"
+        $(".app_controls").css("display", "none");
+        $(".app_videos").empty()
+        $(".app_videos").append(image);
+
+      }    
 }
