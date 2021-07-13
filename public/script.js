@@ -211,6 +211,5 @@ function destroy_video_chat()
         $(".app_controls").css("display", "none");
         $(".app_videos").empty()
         $(".app_videos").append(image);
-
       }    
 }
