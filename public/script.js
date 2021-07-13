@@ -205,7 +205,7 @@ function destroy_video_chat()
 
       if($(".app_videos"))
       {
-
+        let image = `<img src="./assets/No_Video.png"/>`
         document.getElementsByClassName("app_videos")[0].style.backgroundColor = "white"
         document.getElementsByClassName("app_videos")[0].style.boxShadow = "none"
         $(".app_controls").css("display", "none");

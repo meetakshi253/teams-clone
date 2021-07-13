@@ -18,6 +18,7 @@ header{
   padding: 15px;
   margin-left: 10px;
   width: 89%;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
 }
 
 .app{
@@ -106,6 +107,7 @@ video{
   margin-top: 10px;
   margin-left: 60px;
   width: 100%; 
+  
 }
 
 .meeting_info
