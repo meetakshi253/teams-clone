@@ -18,7 +18,6 @@ header{
   padding: 15px;
   margin-left: 10px;
   width: 89%;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
 }
 
 .app{
@@ -54,7 +53,7 @@ header{
   height: 62vh;
   margin-left: 60px;
   border-radius: 8px;
-  box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
 }
 
 #bunch-of-videos{
@@ -68,6 +67,18 @@ header{
     grid-auto-rows: 400px;
     grid-gap: 50px;*/
 } 
+
+#novideo {
+  vertical-align: middle;
+  border-style: none;
+  margin-left: 10vw;
+  height: 80vh;
+}
+
+#novideo
+{
+  margin: 30%
+}
 
 .box_title
 {
