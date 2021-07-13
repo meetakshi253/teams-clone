@@ -193,28 +193,28 @@ function deafen_undeafen()
 }
 
 function mute_mic() {
-    const newmic = `<i class="fas fa-microphone fa-lg control"></i>
+    const newmic = `<i class="fas fa-microphone fa-lg control " style="color: white;"></i>
     <span>Mute</span>`
     document.querySelector('.incall_controls_mute').innerHTML = newmic;
   
 }
 
 function unmute_mic() {
-    const newmic = `<i class="fas fa-microphone-slash fa-lg control"></i>
+    const newmic = `<i class="fas fa-microphone-slash fa-lg control" style="color: white;"></i>
     <span>Unmute</span>`
     document.querySelector('.incall_controls_mute').innerHTML = newmic;
 }
 
 function turnoff_video()
 {
-    const newcam = `<i class="fas fa-video fa-lg control"></i>
+    const newcam = `<i class="fas fa-video fa-lg control" style="color: white;"></i>
     <span>Stop Video</span>`
     document.querySelector('.incall_controls_video').innerHTML = newcam;
 }
 
 function turnon_video()
 {
-    const newcam = `<i class="fas fa-video-slash fa-lg control"></i>
+    const newcam = `<i class="fas fa-video-slash fa-lg control" style="color: white;"></i>
     <span>Start Video</span>`
     document.querySelector('.incall_controls_video').innerHTML = newcam;
 }
