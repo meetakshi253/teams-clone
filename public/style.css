@@ -74,6 +74,7 @@ header{
   border-style: none;
   margin-left: 10vw;
   height: 80vh;
+  margin-left: 30vw;
 }
 
 #novideo
@@ -327,6 +328,22 @@ p{
   font-weight: 500;
   padding: 10px 20px;
   margin: 8px 0;
+}
+
+#after-video-leave-room
+{
+  width: 150px;
+  border: none;
+  background-color: #6247aa;
+  padding: 10px;
+  border-radius: 8px;
+  color: white;
+  margin-left: 49.0%;
+}
+
+#after-video-leave-room:hover{
+  background-color: rgb(227,48,47);
+  
 }
 
 

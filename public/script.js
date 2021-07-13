@@ -51,6 +51,8 @@ newguy.on('open', userid => {
 socket.on('end-video-chat', (username)=>
 {
     destroy_video_chat()
+    let html = `<br><button id="after-video-leave-room" onclick="leaveroom()" style="display:block"> Leave Room </button>`
+    $(".app__left").append(html);
 })
 
 socket.on('user-left-room', (username)=>
@@ -165,6 +167,7 @@ function play_pause()
 function endcall()
 {
     socket.emit('remove-video', $('#chat_username').text())
+
  //assign ID and create a socket.io event and then use that to remove the video with that particular div id
 }
 
