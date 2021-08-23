@@ -84,12 +84,6 @@ Go to [http://localhost:3000/](http://localhost:3000/) on your browser (preferra
 
 <br />
 
-## Demo
-
-**Video Demo:** https://vimeo.com/574568596
-
-<br />
-
 ## Resourses
 
 * [Icons by Font Awesome](https://fontawesome.com)
