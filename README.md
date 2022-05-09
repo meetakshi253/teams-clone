@@ -94,5 +94,6 @@ Go to [http://localhost:3000/](http://localhost:3000/) on your browser (preferra
 
 ## Contact
 
+* [Website: meetakshisetiya.me](https://www.meetakshisetiya.me)
 * [Github: meetakshi253](https://github.com/meetakshi253)
 * [LinkedIn: meetakshisetiya](https://www.linkedin.com/in/meetakshisetiya/)
